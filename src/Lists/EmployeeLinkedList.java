@@ -6,11 +6,11 @@ public class EmployeeLinkedList {
     // Use a singly linked list if you only want to add items to the front of the list
     // otherwise it will be O(n) instead of O(1) same thing with removing an item
 
-    private EmployeeNode head;
+    private EmployeeNodeLinkedList head;
     private int size = 0;
 
     public void addToFront(Employee employee) {
-        EmployeeNode node = new EmployeeNode(employee);
+        EmployeeNodeLinkedList node = new EmployeeNodeLinkedList(employee);
         // Connect nodes
         // 1- new node with new value next linked to the head
         node.setNext(head);
@@ -27,13 +27,13 @@ public class EmployeeLinkedList {
         return head == null;
     }
 
-    public EmployeeNode removeFromFront(){
+    public EmployeeNodeLinkedList removeFromFront(){
 
         if(isEmpty()){
             return null;
         }
 
-        EmployeeNode removedNode = head;
+        EmployeeNodeLinkedList removedNode = head;
         head = head.getNext();
 
         size--;
@@ -43,7 +43,7 @@ public class EmployeeLinkedList {
     }
 
     public void printList() {
-        EmployeeNode current = head;
+        EmployeeNodeLinkedList current = head;
         System.out.print("HEAD -> ");
 
         while (current != null) {

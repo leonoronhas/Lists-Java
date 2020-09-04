@@ -1,11 +1,11 @@
 package Lists;
 
-public class EmployeeNode {
+public class EmployeeNodeLinkedList {
 
     private Employee employee;
-    private EmployeeNode next;
+    private EmployeeNodeLinkedList next;
 
-    public EmployeeNode(Employee employee) {
+    public EmployeeNodeLinkedList(Employee employee) {
         this.employee = employee;
     }
 
@@ -17,11 +17,11 @@ public class EmployeeNode {
         this.employee = employee;
     }
 
-    public EmployeeNode getNext() {
+    public EmployeeNodeLinkedList getNext() {
         return next;
     }
 
-    public void setNext(EmployeeNode next) {
+    public void setNext(EmployeeNodeLinkedList next) {
         this.next = next;
     }
 
